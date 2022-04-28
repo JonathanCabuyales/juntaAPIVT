@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<factura id="comprobante" version="1.00">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>Nombre de la empresa</razonSocial>
+    <nombreComercial>Nombre de la empresa</nombreComercial>
+    <ruc>1234567891001</ruc>
+    <claveAcceso>21313456213134562131345621313456213134562131345621313456213134561</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000001234</secuencial>
+    <dirMatriz>Direccion de la empresa</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaemision>21/09/2021</fechaemision>
+    <dirEstablecimiento>Direccion establecimiento</dirEstablecimiento>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>05</tipoIdentificacionComprador>
+    <razonSocialComprador>Nombre del comprador</razonSocialComprador>
+    <identificacionComprador>1234567891</identificacionComprador>
+    <totalSinImpuesto>1.00</totalSinImpuesto>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos/>
+    <totalImpuesto/>
+    <codigo>2</codigo>
+    <codigoPorcentaje>0</codigoPorcentaje>
+    <valor>0</valor>
+    <propina>0.00</propina>
+    <importeTotal>0.00</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPagos>01</formaPagos>
+        <total>1.00</total>
+        <plazo>30</plazo>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>PRO001</codigoPrincipal>
+      <descipcion>descripcion del producto</descipcion>
+      <cantidad>1</cantidad>
+      <precioUnitario>1.00</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>1.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>0.00</tarifa>
+          <baseImponible>1.00</baseImponible>
+          <valor>0.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional/>
+  <campoAdicional nombre="email">correo</campoAdicional>
+</factura>
