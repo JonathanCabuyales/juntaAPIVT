@@ -16,7 +16,7 @@ $get = mysqli_query($con, "SELECT * FROM prefactura prefac, clientes cli
 WHERE prefac.fechapago_prefac BETWEEN '$fechaInicio 00:00:00' AND '$fechaFin 23:59:59'
 AND prefac.facturagenerada_prefac = 'S'
 AND prefac.id_cli = cli.id_cli
-ORDER BY cli.direccion_cli DESC");
+AND prefac.claveacceso ORDER BY cli.direccion_cli DESC");
 
 $data = array();
 

@@ -15,9 +15,10 @@ if (!$jsonLectura) {
 
 $id_med = $jsonLectura;
 
-$query = "SELECT * FROM lecturas lec, clientes cli
+$query = "SELECT * FROM lecturas lec, clientes cli, prefactura pre
 WHERE lec.id_med = '$id_med' 
 AND lec.id_med = cli.id_cli
+AND pre.id_cli = '$id_med'
 ORDER BY fechalecact_lec DESC";
 
 $get = mysqli_query($con, $query);

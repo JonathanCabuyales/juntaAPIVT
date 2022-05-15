@@ -6,39 +6,41 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 
 include ("../conexion/bd.php");
 
-// $jwt = $_GET['token'];
+$clave = $_GET['claveacceso'];
+$id = $_GET['id'];
 
-// $claveAcceso = $_POST['secuencial'];
-
-$query = "SELECT secuencial 
-FROM facturas
-ORDER BY id_fac DESC LIMIT 1";
+$query = "UPDATE prefactura 
+SET claveacceso = '$clave'
+WHERE id_prefac = '$id'";
 
 $get = mysqli_query($con, $query);
 
-$data = array();
+/* $data = array();
 
 if ($get) {
-    $array = array();
-    while ($fila = mysqli_fetch_assoc($get) ) {	
-        // echo json_encode($fila);
-        $data[] = array_map('utf8_encode', $fila);
-    }
+    
 }else{
     $res = array();
-}
+} */
 
-$res = $data;
+// $res = $data;
 
 if($get){
     echo json_encode(
         array(
-            'data'=> $data,
+            'data'=> $get,
             'message' => 'correcto',
             'status' => 'success'
         )
     ); 
 }else{
-    echo mysqli_error($con);
+    echo json_encode(
+        array(
+            'data'=> $get,
+            'message' => 'no correcto',
+            'status' => 'error'
+        )
+    ); 
+    // echo mysqli_error($con);
 
 }

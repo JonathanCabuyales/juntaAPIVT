@@ -48,38 +48,8 @@ $total_fac = floatval($total_fac);
 $mesesatraso_fac = intval($mesesatraso_fac); */
 
 $query = "INSERT INTO facturas
-(secuencial, 
-id_cli, 
-id_usuario, 
-servicios_fac, 
-impuesto_fac, 
-fondosocial_fac, 
-neto_fac, 
-total_fac, 
-metodo_fac, 
-mesesatraso_fac, 
-generada_fac, 
-numeroautorizacion, 
-claveacceso, 
-fechacceso, 
-estado, 
-id_prefactura) 
-VALUES ('$secuencial',
-'$id_cli', 
-'$id_usuario', 
-'$servicios_fac', 
-'$impuesto_fac',
-'$fondosocial_fac', 
-'$neto_fac', 
-'$total_fac', 
-'$metodo_fac', 
-'$mesesatraso_fac' ,
-'$generada_fac', 
-'', 
-'$claveacceso', 
-'', 
-'$estado', 
-'$id_prefactura')";
+(secuencial) 
+VALUES ('$secuencial')";
 
 /* 
 
